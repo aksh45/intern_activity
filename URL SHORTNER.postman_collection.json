@@ -1,0 +1,730 @@
+{
+	"info": {
+		"_postman_id": "715a43f9-d68d-4345-9638-b5d013aa79ab",
+		"name": "URL SHORTNER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Short Url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\" : \"https://aksh45.github.io\",\n    \"short_code\" : \"testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/makemeshort",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"makemeshort"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "http://google.com",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Short Url with custom short code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\" : \"https://aksh45.github.io\",\n    \"short_code\" : \"testing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/makemeshort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"makemeshort"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "http://google.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41-DJcZ1Flb/zEY/grPFoRigsiRBPo\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 08:16:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"short_url\": \"http://localhost:3000/testing\"\n}"
+				},
+				{
+					"name": "Create A Short URL With Random Short Code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\" : \"https://aksh45.github.io\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/makemeshort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"makemeshort"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "http://google.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"43-lMwTM/Ahg376+COQchL4obWqoW8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 08:12:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"short_url\": \"http://localhost:3000/qoSIBfdBg\"\n}"
+				},
+				{
+					"name": "Invalid Url",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\" : \"aksh45.github.io\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/makemeshort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"makemeshort"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "http://google.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19-SwBHjHX42C4ijX2enfdnsHu7M98\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 08:14:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"invalid url\"\n}"
+				},
+				{
+					"name": "Invalid Short Code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\" : \"https://aksh45.github.io\",\n    \"short_code\" : \"a/b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/makemeshort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"makemeshort"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "http://google.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-sGJMDyqjmmgBwB36JL2c7suXb38\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 08:14:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"invalid short_code\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Short Url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/testing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"testing"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Short url not found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/hellobro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"hellobro"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17-m4r1LcV4pvVDhRunAabPoDm1PiI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 07:56:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"not found\"\n}"
+				},
+				{
+					"name": "Successfully redirect To Actual URL",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/testing",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"testing"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3063"
+						},
+						{
+							"key": "Server",
+							"value": "GitHub.com"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "permissions-policy",
+							"value": "interest-cohort=()"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Fri, 24 Dec 2021 14:16:29 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31556952"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"61c5d63d-1e50\""
+						},
+						{
+							"key": "expires",
+							"value": "Mon, 10 Jan 2022 08:16:51 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=600"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "x-proxy-cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-GitHub-Request-Id",
+							"value": "7930:4CB1:246FE6:2E6059:61DBE91B"
+						},
+						{
+							"key": "Accept-Ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 08:17:43 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 varnish"
+						},
+						{
+							"key": "Age",
+							"value": "0"
+						},
+						{
+							"key": "X-Served-By",
+							"value": "cache-del21730-DEL"
+						},
+						{
+							"key": "X-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Cache-Hits",
+							"value": "0"
+						},
+						{
+							"key": "X-Timer",
+							"value": "S1641802663.863684,VS0,VE208"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Fastly-Request-ID",
+							"value": "dfd7b1d56074ecd93ef76ddaff73c7f45d4ad121"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en-US\">\n    <head>\n        <meta charset='utf-8'>\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <link rel=\"stylesheet\" href=\"/assets/css/style.css?v=\">\n        <!-- Start of Async Drift Code -->\n        <script>\n\t\"use strict\";\n\t\n\t!function() {\n\t  var t = window.driftt = window.drift = window.driftt || [];\n\t  if (!t.init) {\n\t\tif (t.invoked) return void (window.console && console.error && console.error(\"Drift snippet included twice.\"));\n\t\tt.invoked = !0, t.methods = [ \"identify\", \"config\", \"track\", \"reset\", \"debug\", \"show\", \"ping\", \"page\", \"hide\", \"off\", \"on\" ], \n\t\tt.factory = function(e) {\n\t\t  return function() {\n\t\t\tvar n = Array.prototype.slice.call(arguments);\n\t\t\treturn n.unshift(e), t.push(n), t;\n\t\t  };\n\t\t}, t.methods.forEach(function(e) {\n\t\t  t[e] = t.factory(e);\n\t\t}), t.load = function(t) {\n\t\t  var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement(\"script\");\n\t\t  o.type = \"text/javascript\", o.async = !0, o.crossorigin = \"anonymous\", o.src = \"https://js.driftt.com/include/\" + n + \"/\" + t + \".js\";\n\t\t  var i = document.getElementsByTagName(\"script\")[0];\n\t\t  i.parentNode.insertBefore(o, i);\n\t\t};\n\t  }\n\t}();\n\tdrift.SNIPPET_VERSION = '0.3.1';\n\tdrift.load('f2buym3z69yw');\n\t</script>\n        <!-- End of Async Drift Code -->\n        <!-- Begin Jekyll SEO tag v2.7.1 -->\n        <title>Akshit Ahuja</title>\n        <meta name=\"generator\" content=\"Jekyll v3.9.0\" />\n        <meta property=\"og:title\" content=\"Akshit Ahuja\" />\n        <meta property=\"og:locale\" content=\"en_US\" />\n        <link rel=\"canonical\" href=\"https://aksh45.github.io/\" />\n        <meta property=\"og:url\" content=\"https://aksh45.github.io/\" />\n        <meta property=\"og:site_name\" content=\"Akshit Ahuja\" />\n        <meta name=\"twitter:card\" content=\"summary\" />\n        <meta property=\"twitter:title\" content=\"Akshit Ahuja\" />\n        <script type=\"application/ld+json\">\n{\"headline\":\"Akshit Ahuja\",\"url\":\"https://aksh45.github.io/\",\"@type\":\"WebSite\",\"name\":\"Akshit Ahuja\",\"@context\":\"https://schema.org\"}</script>\n        <!-- End Jekyll SEO tag -->\n\n  \n    </head>\n    <body>\n        <header>\n            <div class=\"container\">\n                <a id=\"a-title\" href=\"/\">\n                    <h1>Akshit Ahuja</h1>\n                </a>\n                <h2></h2>\n                <section id=\"downloads\">\n                    <a href=\"https://github.com/aksh45/aksh45.github.io\" class=\"btn btn-github\">\n                        <span class=\"icon\"></span>View on GitHub\n                    </a>\n                </section>\n            </div>\n        </header>\n        <div class=\"container\">\n            <section id=\"main_content\">\n                <script>\n\"use strict\";\n\n!function() {\n  var t = window.driftt = window.drift = window.driftt || [];\n  if (!t.init) {\n    if (t.invoked) return void (window.console && console.error && console.error(\"Drift snippet included twice.\"));\n    t.invoked = !0, t.methods = [ \"identify\", \"config\", \"track\", \"reset\", \"debug\", \"show\", \"ping\", \"page\", \"hide\", \"off\", \"on\" ], \n    t.factory = function(e) {\n      return function() {\n        var n = Array.prototype.slice.call(arguments);\n        return n.unshift(e), t.push(n), t;\n      };\n    }, t.methods.forEach(function(e) {\n      t[e] = t.factory(e);\n    }), t.load = function(t) {\n      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement(\"script\");\n      o.type = \"text/javascript\", o.async = !0, o.crossorigin = \"anonymous\", o.src = \"https://js.driftt.com/include/\" + n + \"/\" + t + \".js\";\n      var i = document.getElementsByTagName(\"script\")[0];\n      i.parentNode.insertBefore(o, i);\n    };\n  }\n}();\ndrift.SNIPPET_VERSION = '0.3.1';\ndrift.load('f2buym3z69yw');\n</script>\n                <h2 id=\"about-me\">About Me</h2>\n                <p>My name is Akshit Ahuja , I am a 4th year undergrad student from Guru Nanak Dev Engineering College ,who have some keen interest in traveling and writing code. I had completed my high school from Saint Thomas Senior Secondary School Ludhiana.</p>\n                <h2 id=\"work-experience\">Work Experience</h2>\n                <ol>\n                    <li>\n                        <p>Technical Content Writing Intern :- Content writing is not considered as a good job in India but I have a keen interest in documenting the stuff ,for me my blogs are the way to document the stuff which I have read or learned. In end of december 2020  i started my TCW intern at geeksforgeeks and my \n                            <a href=\"https://www.geeksforgeeks.org/send-direct-message-on-instagram-using-selenium-in-python/\">1st article</a> was about browser automation. I wrote about 10\n                            <a href=\"https://auth.geeksforgeeks.org/user/UnworthyProgrammer/articles\">articles</a> in my internship and geeksforgeeks paid me approx 300 Rs for each article this was my 1st earning as a geek and I was quite excited about it.\n                        </p>\n                    </li>\n                    <li>\n                        <p>Software Developer Intern :- This Intern was a life changing experience for me I learned a lot during this period. My intership started from mid of june 2021 and ended at end of september 2021. During this period I worked in the versatile atmosphere where things changed every week. I developed a microservice which acts as a wrap up for tally erp tool, also I worked on writing some ETLs.</p>\n                    </li>\n                </ol>\n                <h2 id=\"projects\">Projects</h2>\n                <ol>\n                    <li>\n                        <p>Attendance Calculator :- This Project was based on real life problem, in our college we have 75% Attendance criteria if you don’t maintain 75% attendance in particular subject then you can be detained in that subject. In our college teachers mark the attendance on moodle. Many students use to calculate how many lectures they have to attend or how many lectures they can  leave , this was routine for most of the students but the thing was that they were doing this task manually, their was the scope of automation so I developed a simple django website which take the login credentials of moodle from the user and then scrap his attendance of all subjects and calculate how many lectures he/she have to attend or how many lectures he/she can leave.</p>\n                    </li>\n                    <li>\n                        <p>URL Shortner :- This project was developed by me when I started learning node.js , it was a full fledge project with authentication, autherization, registeration. So the basic work flow for the project is you have to signup to the portal after that you can login to the portal and create short urls. This project is different from the normal url shortner, if you create a short url from this project then it will look like base_url/your_user_name/short_code the difference from normal url shortner is that your short url will always have your user name. The other feature of this url shortner is that you can add password protection to your short url.</p>\n                    </li>\n                    <li>\n                        <p>Fest Registeration API :- This API was developed for my college Tech Fest , Approx 10 days was left for the fest and the organisers asked to develop a website for the fest. Team decided we will develop the frontend and backend separately. I choose to work on the backend and developed simple API which provides the functonlity of creating event , Registering in particular event , sending mails to the particpants, Admin functionalities , organiser functionalities.</p>\n                    </li>\n                </ol>\n                <h2 id=\"my-social-links\">My Social Links</h2>\n                <ol>\n                    <li>\n                        <a href=\"https://github.com/aksh45\">github</a>\n                    </li>\n                    <li>\n                        <a href=\"https://www.linkedin.com/in/akshit-ahuja-11715616b/\">linkedin</a>\n                    </li>\n                    <li>\n                        <a href=\"https://techsyapa.blogspot.com\">personal_blog</a>\n                    </li>\n                    <li>\n                        <a href=\"https://auth.geeksforgeeks.org/user/UnworthyProgrammer/articles\">tech_blog</a>\n                    </li>\n                    <li>\n                        <a href=\"https://instagram.com/aksh45.in\">Instagram</a>\n                    </li>\n                    <li>\n                        <a href=\"https://www.hackerrank.com/ahujaakshit20\">hackerrank</a>\n                    </li>\n                </ol>\n                <h2 id=\"note\">Note</h2>\n                <p>If you have some free lancing task for me then feel free to contact me at \n                    <a href=\"mailto:ahujaakshit20@gmail.com\">ahujaakshit20@gmail.com</a>\n                </p>\n            </section>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Get Short URL Info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"short_url\": \"http://localhost:3000/testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/getinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getinfo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Short URL Info",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"short_url\": \"http://localhost:3000/testing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/getinfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getinfo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"55-uhQhrMxWDtZqZllmN8CbhC0Ci+Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 08:18:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"url\": \"https://aksh45.github.io\",\n    \"createt_at\": \"2022-01-10T08:16:39.267Z\",\n    \"clicks\": 1\n}"
+				},
+				{
+					"name": "Short URL not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"short_url\": \"http://localhost:3000/testing34\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/getinfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getinfo"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-bjVLxiqXc7fCGigZICYgoIqKDRE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 08:18:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"short url not found\"\n}"
+				},
+				{
+					"name": "Invalid short url",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"short_url\": \"localhost:3000/testing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/getinfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getinfo"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "37"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"25-Gh9mAFS6B74C96fd/9w6dzFPTLI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jan 2022 08:25:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"invalid short_url value\"\n}"
+				}
+			]
+		}
+	]
+}

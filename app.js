@@ -13,7 +13,7 @@ app.get('*',function(req, res){
 	res.status(400).send('Sorry this Page does not excist');
 });
 
-mongoose.connect("mongodb://mongo:27017/url-shortner",{ useNewUrlParser: true,useUnifiedTopology: true },() =>{
+mongoose.connect("mongodb://mongo/url-shortner",{ useNewUrlParser: true,useUnifiedTopology: true },() =>{
 });
 
 app.listen(process.env.PORT || 3000);
